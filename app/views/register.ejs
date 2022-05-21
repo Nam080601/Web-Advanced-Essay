@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="limiter">
+      <div class="container-login">
+        <div class="wrap-login">
+          <form class="login-form validate-form">
+            <div class="wrap-back">
+              <button
+                class="btn-back me-2"
+                type="button"
+                onClick="window.location='/login'"
+              >
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+            </div>
+            <span class="login-form-title">ĐĂNG KÝ</span>
+
+            <div
+              class="wrap-input validate-input"
+              style="margin-bottom: 16px"
+              data-validate="Chưa nhập họ tên"
+            >
+              <input
+                class="input"
+                id="name"
+                type="text"
+                placeholder="Họ và tên"
+              />
+              <span class="focus-input"></span>
+            </div>
+
+            <div
+              class="wrap-input validate-input"
+              style="margin-bottom: 16px"
+              data-validate="Chưa nhập tài khoản"
+            >
+              <input
+                class="input"
+                id="username"
+                type="text"
+                placeholder="Tài khoản"
+              />
+              <span class="focus-input"></span>
+            </div>
+
+            <div
+              class="wrap-input validate-input"
+              style="margin-bottom: 16px"
+              data-validate="Chưa nhập mật khẩu"
+            >
+              <input
+                class="input"
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Mật khẩu"
+              />
+              <span class="focus-input"></span>
+            </div>
+
+            <div
+              class="wrap-input validate-input"
+              style="margin-bottom: 16px"
+              data-validate="Chưa nhập mật khẩu"
+            >
+              <input
+                class="input"
+                id="password2"
+                type="password"
+                name="password2"
+                placeholder="Nhập lại mật khẩu"
+              />
+              <span class="focus-input"></span>
+            </div>
+
+            <div class="container-login-form-btn my-5">
+              <button class="login-form-btn" type="submit">Đăng ký</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

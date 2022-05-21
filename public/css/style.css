@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css2?family=Varela+Round&display=swap";
+* {
+  font-family: "Varela Round", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  appearance: none;
+}
+
+.txt1 {
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.txt2 {
+  font-size: 15px;
+  color: #2596be;
+  line-height: 1.4;
+}
+
+.txt3 {
+  font-size: 15px;
+  color: #2596be;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.wrap-back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  background-color: #2596be;
+}
+
+.btn-back {
+  border: none;
+  border-radius: 50%;
+  background-color: #2596be;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+}
+
+.btn-back:hover {
+  background-color: #4be88d;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  background-color: #fff;
+}
+
+.wrap-login {
+  width: 500px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  width: 100%;
+  position: relative;
+  padding: 178px 55px 0px;
+}
+
+.login-form-title {
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #2596be;
+  padding-top: 50px;
+  padding-bottom: 39px;
+}
+
+.wrap-input {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 27px;
+  position: relative;
+  z-index: 1;
+}
+
+.input {
+  font-size: 15px;
+  color: #1b3815;
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 55px;
+  background: #ebebeb;
+  border-radius: 27px;
+  padding: 0 35px 0 35px;
+  outline: none;
+  border: none;
+}
+.input:focus + .focus-input {
+  width: calc(100% + 20px);
+}
+
+.focus-input {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: #ebebeb;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.container-login-form-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #2596be;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  outline: none;
+  border: none;
+}
+.login-form-btn:hover {
+  color: #2596be;
+  background-color: #fff;
+  border: 2px solid #2596be;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 125px 0 40px;
+}
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  z-index: 1000;
+  max-width: 70%;
+  background-color: #fff;
+  border: 1px solid #c80000;
+  border-radius: 14px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  pointer-events: none;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden !important;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.alert-validate::after {
+  content: "⚠";
+  display: block;
+  position: absolute;
+  z-index: 1100;
+  color: #c80000;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+}
+.alert-validate:hover:before {
+  visibility: visible !important;
+  opacity: 1;
+}
+
+.dashboard-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-right: 2px solid #fff;
+  background-color: #2596be;
+}
+.dashboard-area .h-dash {
+  border-bottom: 2px solid #fff;
+}
+
+.chat-area {
+  background-image: url("/img/background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  right: 0px;
+  width: 75%;
+  min-height: 100vh;
+  padding-bottom: 3rem !important;
+}
+.chat-area #connect {
+  position: fixed;
+  width: 75%;
+  margin: 0px auto;
+}
+.chat-area #connect .user-connect {
+  position: sticky;
+  top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  padding: 5px 10px;
+  border: 1px solid #2596be;
+  border-radius: 15px;
+  background-color: #2596be;
+}
+@media (max-width: 992px) {
+  .chat-area .chat-block {
+    margin-bottom: 35px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.logout-block {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 100%;
+}
+
+.btn-logout {
+  padding: 5px 15px;
+  margin: 0.25rem;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  border: 2px solid #2596be;
+  color: #2596be;
+}
+.btn-logout:hover {
+  background: #2596be;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  height: 3rem;
+  width: 75%;
+  backdrop-filter: blur(10px);
+}
+#form > button {
+  background: #2596be;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  #form {
+    height: 6rem;
+    padding: 0.5rem;
+  }
+  #form > input {
+    font-size: 24pt;
+  }
+  #form > button {
+    padding: 0 2.5rem;
+  }
+  #form > button > i {
+    font-size: 24pt;
+  }
+}
+
+#nickname {
+  border: none;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+#nickname:focus {
+  outline: none;
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+  outline: none;
+}
+
+.typing {
+  text-align: center;
+  color: red;
+}
+
+.chat {
+  border: none;
+  background: #e2ffe8;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+.messages {
+  color: red;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@media (max-width: 576px) {
+  .login-form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
